@@ -1,0 +1,9 @@
+Calculate lcdevice as $cdevice.$ident     ;; store current print destination
+Do $cdevice.$assign(kDevOmnisPDF)
+Do Omnis PDF Device.$settemp(kTrue,1) Returns lID
+Do Omnis PDF Device.$setdocinfo(iPDFAuthor,iPDFTitle,iPDFSubject) Returns #F
+
+Do $clib.$reports.rMyPicturesForm.$open('*',iSqlRow) Returns lReportInst
+
+Do $cdevice.$assign(lcdevice)     ;; restore print destination
+Do $cinst.$clientcommand("showpdf",row(lID))

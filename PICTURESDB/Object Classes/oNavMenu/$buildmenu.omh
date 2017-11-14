@@ -1,0 +1,33 @@
+Do method defineMenuList (lMenuList)
+Do method defineMenuList (lCascadeList)
+
+For iNavMenu.$line from 1 to iNavMenu.$linecount step 1
+	Do iNavMenu.$loadcols()
+	Calculate lIdent as iNavMenu.$line
+	
+	If len(iMenuOption)
+		If iNavMenu.$line<iNavMenu.$linecount&lLineCount<iNavMenuMaxRows
+			Do lCascadeList.$add(kNavMenuTypeEntry,iMenuOption,iMenuOptionDesc,0,lIdent)
+		Else
+			Do lCascadeList.$add(kNavMenuTypeEntry,iMenuOption,iMenuOptionDesc,kNavMenuFlagEndOfRowOrColumn,lIdent)
+			Calculate lLineCount as 0
+		End If
+	End If
+	
+	Calculate lNextGroup as iNavMenu.[iNavMenu.$line+1].iMenuGroup
+	If iNavMenu.$line=iNavMenu.$linecount|iForms.$line<iNavMenu.$linecount&lNextGroup<>iMenuGroup
+		If lCascadeList.$linecount>0
+			Do lMenuList.$add(kNavMenuTypeCascade,iMenuGroup,iMenuGroupDesc,kNavMenuFlagHorizontalLayout,2,"",row(lCascadeList))
+			Do lCascadeList.$clear()
+		Else
+			Do lMenuList.$add(kNavMenuTypeEntry,"Home",iMenuGroupDesc,kNavMenuFlagHorizontalLayout,lIdent)
+		End If
+		Calculate lLineCount as 0
+	End If
+	Calculate lLineCount as lLineCount+1
+End For
+Quit method lMenuList
+
+
+
+;

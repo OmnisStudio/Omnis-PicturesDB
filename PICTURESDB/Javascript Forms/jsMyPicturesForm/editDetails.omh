@@ -1,0 +1,3 @@
+Calculate iMode as cUpdateMode     ;; edit mode
+
+Do $cinst.$objs.MainPane.$currentpage.$assign(2)

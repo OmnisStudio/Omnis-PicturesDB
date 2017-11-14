@@ -1,0 +1,27 @@
+On evClick
+	Set reference lStatRef to iSqlRow.$statementobject
+	
+	If iMode=cInsertMode     ;; insert
+		Do iSqlRow.$insert() Returns lFlag
+		If lFlag
+			Calculate iOldRow as iSqlRow
+			Calculate iMode as cUpdateMode
+			
+			Do iSqlList.$add()
+			Do iSqlList.$line.$assign(iSqlList.$linecount)
+			Do iSqlList.$assignrow(iSqlRow)
+		Else
+			Do method showLastError (lStatRef)
+		End If
+	Else     ;; update
+		Do iSqlRow.$update(iOldRow) Returns lFlag
+		If lFlag
+			Calculate iOldRow as iSqlRow
+			Do iSqlList.$assignrow(iSqlRow)
+		Else
+			Do method showLastError (lStatRef)
+		End If
+	End If
+	
+	Do method enableButtons
+	Do $cinst.$redraw()

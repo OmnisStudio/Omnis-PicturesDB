@@ -1,0 +1,34 @@
+{
+	"classtype": "kTask",
+	"internalversion": 4,
+	"tvardefs": [
+
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iConnectObj",
+			"order": 1,
+			"type": "kObject",
+			"subtype": "oConnect",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-11-10 14:45:29",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2017-11-10 14:49:42",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": ""
+	}
+}

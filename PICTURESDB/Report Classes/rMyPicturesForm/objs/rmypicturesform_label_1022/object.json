@@ -1,0 +1,25 @@
+{
+	"ident": 1022,
+	"order": 5,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kRightJst",
+		"desgroup": 0,
+		"deslock": false,
+		"fieldstyle": "AppRepLabel",
+		"floating": false,
+		"font": 1,
+		"fontextra": 0,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"height": 0.599,
+		"left": 0.0,
+		"lineno": 10,
+		"lineoffset": 0.0,
+		"printontop": false,
+		"text": "Pic_Category",
+		"textcolor": "RGB(0,0,0)",
+		"userinfo": "",
+		"width": 4.074
+	}
+}

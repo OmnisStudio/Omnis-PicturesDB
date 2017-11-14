@@ -1,0 +1,9 @@
+;  Enter your initialization code here
+
+Calculate iRow as pRow
+
+Do iMainList.$define(iSubList,iMainText)
+Do iSubList.$define(iTextCol1,iTextCol2,iAccessoryType,iAccessoryContent,iAccessoryValueCol,iImagePath,iFormName)
+Do iSubList.$add('MyPictures Entry','Master Detail',kJSNativeListAccessoryTypeDisclosure,'',0,iconurl(12390),'jsMyPicturesForm')
+
+Do iMainList.$add(iSubList,'Forms')

@@ -1,0 +1,30 @@
+{
+	"ident": 1014,
+	"order": 3,
+	"objtype": "kPictureobj",
+	"properties": {
+		"calculated": false,
+		"dataname": "iImageBin",
+		"desgroup": 0,
+		"deslock": false,
+		"effect": "kBorderNone",
+		"fontextra": 0,
+		"height": 2.256,
+		"horzdpi": 0,
+		"keepaspectratio": true,
+		"left": 6.617,
+		"lineno": 2,
+		"lineoffset": 0.0,
+		"nolineifempty": false,
+		"noreload": false,
+		"noscale": false,
+		"printontop": false,
+		"rawpictformat": "PNG",
+		"text": "",
+		"totalsifnoline": false,
+		"userinfo": "",
+		"vertdpi": 0,
+		"visible": true,
+		"width": 6.8
+	}
+}

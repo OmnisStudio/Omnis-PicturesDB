@@ -1,0 +1,5 @@
+Begin text block
+Text: {WHERE  Pic_Category LIKE '%[iSearchText]%' OR Pic_Name LIKE '%[iSearchText]%' OR Pic_Image LIKE '%[iSearchText]%' OR Pic_Desc LIKE '%[iSearchText]%' OR Pic_ID LIKE '%[iSearchText]%' OR Pic_URL LIKE '%[iSearchText]%'}
+End text block
+Get text block lWhereClause
+Do method fetchData (lWhereClause)

@@ -1,0 +1,55 @@
+{
+	"ident": 1016,
+	"order": 14,
+	"objtype": "kComponent",
+	"componentlib": "jsPage",
+	"componentctrl": "Page Control",
+	"properties": {
+		"::currentpage": 1,
+		"::pagecount": 2,
+		"alpha": 255,
+		"backalpha": 255,
+		"backcolor": "RGB(68,68,68)",
+		"contextmenu": "",
+		"cssclassname": "",
+		"currentpageindicatorcolor": "kBlack",
+		"desgroup": 0,
+		"designactive": true,
+		"deslock": false,
+		"disabledefaultcontextmenu": false,
+		"disablesystemfocus": false,
+		"dropmode": "kAcceptNone",
+		"enabled": true,
+		"events": "",
+		"fieldstyle": "AppPageControl",
+		"linkedobject": "MainPane",
+		"objlink": 0,
+		"pageindicatorcolor": "kColorDefault",
+		"preventlayoutanimation": false,
+		"tooltip": "",
+		"userinfo": "",
+		"visible": true
+	},
+	"layout": {
+		"320": {
+			"left": 0,
+			"top": 370,
+			"width": 320,
+			"height": 30,
+			"dragborder": false,
+			"edgefloat": "kEFposnBottomToolBar",
+			"errortextpos": "kJSErrorTextPosUnder",
+			"visible": true
+		},
+		"768": {
+			"left": 0,
+			"top": 470,
+			"width": 768,
+			"height": 30,
+			"dragborder": false,
+			"edgefloat": "kEFposnBottomToolBar",
+			"errortextpos": "kJSErrorTextPosUnder",
+			"visible": true
+		}
+	}
+}

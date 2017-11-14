@@ -1,0 +1,10 @@
+Set reference lStatRef to iSqlList.$statementobject
+
+Do iSqlRow.$delete() Returns lFlag
+If lFlag
+	Do iSqlList.$remove(iSqlList.$line)
+	Do $cinst.$objs.MainPane.$currentpage.$assign(1)
+	Do method loadDetails
+Else
+	Do method showLastError (lStatRef)
+End If

@@ -1,0 +1,6 @@
+On evClick
+	Do $cwind.$homeclick
+	
+On evBefore
+	
+On evAfter

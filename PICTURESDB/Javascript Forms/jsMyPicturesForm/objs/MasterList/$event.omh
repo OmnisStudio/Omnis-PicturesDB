@@ -1,0 +1,11 @@
+On evClick
+	Do method loadDetails
+	
+On evDoubleClick
+	Do method editDetails
+	
+On evCellChanged
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

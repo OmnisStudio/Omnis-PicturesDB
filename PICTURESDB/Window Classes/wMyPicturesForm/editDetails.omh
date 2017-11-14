@@ -1,0 +1,8 @@
+Calculate iMode as cUpdateMode     ;; edit mode
+
+Do iSqlRow.$assignrow(iSqlList)
+Calculate iOldRow as iSqlRow
+
+Do method enableButtons
+Do $cinst.$objs.MainPane.$currentpage.$assign(2)
+Do $cinst.$redraw()

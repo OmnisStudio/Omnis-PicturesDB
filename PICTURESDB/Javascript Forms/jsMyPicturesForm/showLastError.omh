@@ -1,0 +1,4 @@
+Calculate lNativeErrorCode as pStatRef.$nativeerrorcode
+Calculate lNativeErrorText as pStatRef.$nativeerrortext
+
+Do $cinst.$showmessage(con(lNativeErrorCode,' - ',lNativeErrorText),'SQL Error')

@@ -1,0 +1,23 @@
+{
+	"ident": 1007,
+	"order": 1,
+	"objtype": "kToolMenuButton",
+	"properties": {
+		"enabled": true,
+		"helpfile": 0,
+		"iconid": "k16x16+1608",
+		"longpress": false,
+		"menuname": {
+			"type": 0,
+			"calc": "mMain"
+		},
+		"text": {
+			"type": 0,
+			"calc": "PicturesDB"
+		},
+		"tooltip": "",
+		"userinfo": "",
+		"users": "12345678",
+		"varwidthtextplatforms": "kVWTMSWindows,kVWTmacOS,kVWTUnix"
+	}
+}

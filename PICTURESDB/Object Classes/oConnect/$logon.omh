@@ -1,0 +1,46 @@
+;  open single sql connection to database
+
+Switch low(pDam)
+	Case 'mysqldam'
+		Do $root.$extobjects.MYSQLDAM.$objects.MYSQLSESS.$new() Returns iSessionObject
+		If pPort>0
+			Do iSessionObject.$port.$assign(pPort)     ;; mysql has optional port
+		End If
+		
+	Case 'oracle8dam'
+		Do $root.$extobjects.ORACLE8DAM.$objects.ORACLE8SESS.$new() Returns iSessionObject
+		
+	Case 'pgsqldam'     ;; postgres
+		Do $root.$extobjects.PGSQLDAM.$objects.PGSQLSESS.$new() Returns iSessionObject
+		If pPort>0
+			Do iSessionObject.$port.$assign(pPort)     ;; postgres has optional port
+		End If
+		
+	Case 'sqlitedam'
+		Do $root.$extobjects.SQLITEDAM.$objects.SQLITESESS.$new() Returns iSessionObject
+		
+	Case 'sybasedam'
+		Do $root.$extobjects.SYBASEDAM.$objects.SYBASESESS.$new() Returns iSessionObject
+		
+	Case 'jdbcdam'
+		Do $root.$extobjects.JDBCDAM.$objects.JDBCSESS.$new() Returns iSessionObject
+		Do iSessionObject.$setdriver(pJDBCDriver)     ;; jdbc requires drivername
+		
+	Case 'odbcdam'
+		Do $root.$extobjects.ODBCDAM.$objects.ODBCSESS.$new() Returns iSessionObject
+		
+	Default
+		;  connect to any other dam
+		Do $root.$extobjects.[pDam].$objects.$first(kTrue,kFalse) Returns lDamRef
+		Do lDamRef.$new() Returns iSessionObject
+End Switch
+
+If len(pDatabase)     ;; database specified
+	If low(pDam)='odbcdam'
+		Do iSessionObject.$defaultdatabase.$assign(pDatabase)
+	Else
+		Do iSessionObject.$database.$assign(pDatabase)
+	End If
+End If
+
+Do iSessionObject.$logon(pHostname,pUsername,pPassword,pSessionname) Returns lFlag

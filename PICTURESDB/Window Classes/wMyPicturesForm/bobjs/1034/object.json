@@ -1,0 +1,27 @@
+{
+	"ident": 1034,
+	"order": 16389,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kRightJst",
+		"backcolor": "kColorDefault",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "AppLabel",
+		"font": 5,
+		"fontsize": 10,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorDefault",
+		"height": 25,
+		"left": 5,
+		"objlink": 131080,
+		"text": "Pic_ID",
+		"textcolor": "kColorDefault",
+		"top": 373,
+		"userinfo": "",
+		"vertcentertext": true,
+		"visible": true,
+		"width": 150
+	}
+}

@@ -1,0 +1,21 @@
+;  Enter your initialization code here
+
+Calculate lSessionName as 'PICTURESDBSESSION'
+Calculate lDam as 'SQLITEDAM'
+Calculate lHostname as replace(low(sys(10)),'picturesdb.lbs','pics.db')
+Calculate lUsername as ''
+Calculate lPassword as ''
+Calculate lDatabase as ''
+Calculate lJDBCDriver as ''
+Calculate lPort as 0
+
+If len(lDam)
+	Do iConnectObj.$logon(lSessionName,lDam,lHostname,lUsername,lPassword,lDatabase,lJDBCDriver,lPort)
+End If
+
+;  install menu on mac or toolbar on windows
+If sys(6)='X'
+	Install menu mMain
+Else
+	Install toolbar {tbMain}
+End If

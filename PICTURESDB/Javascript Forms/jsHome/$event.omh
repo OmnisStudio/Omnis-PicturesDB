@@ -1,0 +1,6 @@
+On evLayoutChanged
+	If pBreakpoint=320
+		Calculate iImageBin as iSmallimageBin
+	Else
+		Calculate iImageBin as iLargeimageBin
+	End If

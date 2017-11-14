@@ -1,0 +1,15 @@
+On evClick
+	No/Yes message Delete {Delete record, are you sure?}
+	If flag true
+		Set reference lStatRef to iSqlRow.$statementobject
+		
+		Do iSqlRow.$delete() Returns lFlag
+		If lFlag
+			Do iSqlList.$remove(iSqlList.$line)
+			Do $cinst.$objs.MainPane.$currentpage.$assign(1)
+			Do method enableButtons
+			Do $cinst.$redraw()
+		Else
+			Do method showLastError (lStatRef)
+		End If
+	End If

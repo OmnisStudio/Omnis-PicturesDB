@@ -1,0 +1,7 @@
+Do iSqlRow.$definefromsqlclass('sMyPictures','Pic_Category','Pic_Name','Pic_Image','Pic_Desc','Pic_ID','Pic_URL')
+Do iSqlRow.$sessionobject.$assign($sessions.PICTURESDBSESSION.$sessionobject) Returns #F
+
+Do iSqlList.$definefromsqlclass('sMyPictures','Pic_Category','Pic_Name','Pic_Image','Pic_Desc','Pic_ID','Pic_URL')
+Do iSqlList.$sessionobject.$assign($sessions.PICTURESDBSESSION.$sessionobject) Returns #F
+
+Do method fetchData ('')

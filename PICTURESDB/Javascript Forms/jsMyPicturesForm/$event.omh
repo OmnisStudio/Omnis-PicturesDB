@@ -1,0 +1,8 @@
+On evLayoutChanged
+	If pBreakpoint=320
+		;  mobile screensizes have smaller buttons, remove text so only icon is displayed
+		Do $cinst.$objs.MainPane.$objs.$sendall($ref.$text.$assign(''),mid($ref.$name,1,3)='btn')
+	Else
+		;  restore button text from class for other breakpoints
+		Do $cinst.$objs.MainPane.$objs.$sendall($ref.$text.$assign($cclass.$objs.MainPane.$objs.[$ref.$name()].$text),mid($ref.$name,1,3)='btn')
+	End If

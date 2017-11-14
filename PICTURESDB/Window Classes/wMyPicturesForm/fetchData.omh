@@ -1,0 +1,8 @@
+Set reference lStatRef to iSqlList.$statementobject
+
+Do iSqlList.$select(pWhereClause) Returns lFlag
+If lFlag
+	Do iSqlList.$fetch(kFetchAll)
+Else
+	Do method showLastError (lStatRef)
+End If

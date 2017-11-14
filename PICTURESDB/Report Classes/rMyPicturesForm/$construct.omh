@@ -1,0 +1,10 @@
+;  Enter your initialization code here
+Calculate lImagePath as con(sys(115),'html',sys(9),'icons',sys(9),'appbuilder',sys(9),'omnisstudio_12352_300x100.png')
+ReadBinFile (lImagePath,iImageBin)
+
+Calculate iSqlList as pSqlList
+For iSqlList.$line from 1 to iSqlList.$linecount step 1
+	Do $cinst.$printrecord()
+End For
+
+Do $cinst.$endprint()

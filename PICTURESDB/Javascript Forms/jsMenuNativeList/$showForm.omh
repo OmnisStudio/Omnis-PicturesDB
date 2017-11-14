@@ -1,0 +1,9 @@
+Do iMainList.$line.$assign(pGroup)
+Do iMainList.$loadcols()
+
+Do iSubList.$line.$assign(pRow)
+Do iSubList.$loadcols()
+
+Do $cinst.$objs.SubWindow.$classname.$assign('jsEmptyForm')     ;; force reload of sub form
+Do $cinst.$objs.SubWindow.$classname.$assign(iFormName)
+Do $cinst.$objs.NavBar.$push.$assign(row(3,iTextCol1,'')) Returns #F

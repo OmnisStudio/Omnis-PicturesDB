@@ -1,0 +1,3 @@
+On evMenuEntryClicked
+	Do iNavObj.$getWindowName(pLineIdent) Returns lFormName
+	Do $cinst.$objs.SubWindow.$classname.$assign(lFormName)

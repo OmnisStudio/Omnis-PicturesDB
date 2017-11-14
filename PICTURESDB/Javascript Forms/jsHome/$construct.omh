@@ -1,0 +1,7 @@
+;  home screen, click on image to proceed
+
+Calculate lImagePath as con(sys(115),'html',sys(9),'icons',sys(9),'appbuilder',sys(9),'omnisstudio_12353_150x50.png')
+ReadBinFile (lImagePath,iSmallimageBin)
+
+Calculate lImagePath as con(sys(115),'html',sys(9),'icons',sys(9),'appbuilder',sys(9),'omnisstudio_12352_300x100.png')
+ReadBinFile (lImagePath,iLargeimageBin)

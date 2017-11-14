@@ -1,0 +1,1 @@
+Do $cinst.$objs.NavBar.$push.$assign(row(2,'Menu','')) Returns #F

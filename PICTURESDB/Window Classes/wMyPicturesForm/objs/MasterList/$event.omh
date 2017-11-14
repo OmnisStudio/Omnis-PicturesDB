@@ -1,0 +1,18 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do method enableButtons
+	
+On evDoubleClick     ;; Event Parameters - pRow ( Itemreference )
+	Do method editDetails
+	
+On evHeaderClick
+	If pColumnNumber=iLastSortCol
+		Calculate iSortDesc as not(iSortDesc)
+	Else
+		Calculate iSortDesc as kFalse
+	End If
+	
+	Do $cinst.$objs.MainPane.$objs.MasterList.$setsortcolumn(pColumnNumber,iSortDesc)
+	Do iSqlList.$sort(iSqlList.C[pColumnNumber],iSortDesc)
+	
+	Calculate iLastSortCol as pColumnNumber
+	Do $cinst.$redraw()
